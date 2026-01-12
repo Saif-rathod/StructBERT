@@ -1,0 +1,17 @@
+venv/
+.venv
+.env/
+.env.local
+.env.*.local
+.idea/
+.vscode/
+*.swp
+*.swo
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+
+.env

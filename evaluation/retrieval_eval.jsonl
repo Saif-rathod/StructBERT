@@ -1,0 +1,3 @@
+{"query": "AVL tree insertion", "gold": ["AVL tree rotations", "Self balancing BST"]}
+{"query": "Detect cycle in directed graph", "gold": ["DFS recursion stack", "Topological sort"]}
+{"query": "Kadane algorithm", "gold": ["Maximum subarray sum"]}

@@ -1,0 +1,37 @@
+[
+    {
+        "id": "bs_exp_01",
+        "topic": "Binary Search",
+        "type": "explanation",
+        "source": "Introduction to Algorithms (CLRS), 3rd Ed.",
+        "content": "Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one."
+    },
+    {
+        "id": "bs_comp_01",
+        "topic": "Binary Search",
+        "type": "complexity_analysis",
+        "source": "Introduction to Algorithms (CLRS), 3rd Ed.",
+        "content": "The time complexity of binary search is O(log n). The best-case time complexity is O(1), which occurs when the central element is the desired element. The space complexity is O(1) for the iterative version and O(log n) for the recursive version due to the call stack."
+    },
+    {
+        "id": "bs_code_py_01",
+        "topic": "Binary Search",
+        "type": "python_code",
+        "source": "LeetCode Canonical Solution",
+        "content": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1"
+    },
+    {
+        "id": "qs_exp_01",
+        "topic": "Quicksort",
+        "type": "explanation",
+        "source": "Grokking Algorithms, A. Bhargava",
+        "content": "Quicksort is a divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively."
+    },
+    {
+        "id": "qs_comp_01",
+        "topic": "Quicksort",
+        "type": "complexity_analysis",
+        "source": "Introduction to Algorithms (CLRS), 3rd Ed.",
+        "content": "Quicksort's average-case time complexity is O(n log n), which is highly efficient. However, its worst-case time complexity is O(n^2), which occurs when the pivot elements are poorly chosen, such as when the array is already sorted. The space complexity is O(log n) due to recursion."
+    }
+]

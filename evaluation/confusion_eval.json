@@ -1,0 +1,5 @@
+{
+  "query": "AVL tree deletion",
+  "should_match": "AVL tree",
+  "should_not_match": ["Red Black Tree", "Binary Heap"]
+}

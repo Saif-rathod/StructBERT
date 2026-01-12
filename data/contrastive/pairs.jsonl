@@ -1,0 +1,3 @@
+{"anchor": "AVL tree insertion", "positive": "Insertion in AVL tree uses rotations to maintain balance"}
+{"anchor": "AVL tree", "positive": "Self balancing binary search tree with balance factor"}
+{"anchor": "AVL tree", "negative": "Segment tree range queries"}
