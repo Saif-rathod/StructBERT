@@ -1,3 +1,7 @@
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Hugging Face Transformers](https://img.shields.io/badge/🤗%20Transformers-Enabled-yellow.svg)](https://github.com/huggingface/transformers)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 # StructBERT
 
 StructBERT is a lightweight project for training and experimenting with BERT-based language modeling and related NLP tasks. It uses Hugging Face Transformers and Datasets for training workflows.
@@ -80,18 +84,50 @@ flowchart TD
     G --> H
 ```
 
+## Usage
+
+### 1) Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+If you do not have a requirements file yet, you can install the core packages manually:
+
+```bash
+pip install transformers datasets torch
+```
+
+### 2) Prepare data
+
+Place your training corpus in:
+
+```text
+data/mlm/dsa_corpus.txt
+```
+
+Each line can contain a sentence, paragraph, or training sample.
+
+### 3) Train the model
+
+```bash
+python training/train_mlm.py
+```
+
+### 4) Check the output
+
+The trained model will be saved to:
+
+```text
+models/structbert_mlm
+```
+
 ## Requirements
 
 - Python 3.8+
 - `transformers`
 - `datasets`
 - `torch`
-
-Install dependencies:
-
-```bash
-pip install transformers datasets torch
-```
 
 ## Dataset
 
@@ -100,8 +136,6 @@ The training script expects a plain text file at:
 ```text
 data/mlm/dsa_corpus.txt
 ```
-
-Each line can contain a sentence, paragraph, or training sample text.
 
 ## Training
 
@@ -118,11 +152,7 @@ python training/train_mlm.py
 3. Tokenizes each sample with truncation to 128 tokens
 4. Applies masked language modeling with a 15% masking probability
 5. Trains the model for 3 epochs
-6. Saves the final model to:
-
-```text
-models/structbert_mlm
-```
+6. Saves the final model to `models/structbert_mlm`
 
 ## Output
 
@@ -150,6 +180,7 @@ You can later reload the model with Hugging Face APIs.
 - Add configuration via command-line arguments
 - Add inference script for testing the trained model
 - Add requirements file or environment setup instructions
+- Add usage examples for retrieval and generation modules
 
 ## License
 
