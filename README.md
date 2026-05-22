@@ -8,6 +8,7 @@ StructBERT is a lightweight project for training and experimenting with BERT-bas
 - Uses Hugging Face `Trainer` for training
 - Supports custom text corpora
 - Saves trained models for later use
+- Includes retrieval, generation, and evaluation components
 
 ## Project Structure
 
@@ -24,6 +25,59 @@ StructBERT/
 ├── readme.md
 ├── requirements.txt
 └── structbert-encoder.ipynb
+```
+
+## Graphs
+
+### Training Pipeline
+
+```mermaid
+graph TD
+    A[Raw Text Corpus] --> B[Tokenizer]
+    B --> C[Tokenized Dataset]
+    C --> D[Data Collator]
+    D --> E[Masked Language Model]
+    E --> F[Trainer]
+    F --> G[Saved Model]
+```
+
+### Project Flow
+
+```mermaid
+graph LR
+    A[Data] --> B[Training]
+    B --> C[Evaluation]
+    B --> D[Generation]
+    B --> E[Retrieval]
+    C --> F[Analysis]
+    D --> F
+    E --> F
+```
+
+## System Design
+
+StructBERT is organized around modular NLP components:
+
+- **Data Layer**: Stores training corpora and any additional datasets used for experiments.
+- **Training Layer**: Handles tokenizer setup, dataset preprocessing, MLM training, and model saving.
+- **Retrieval Layer**: Supports lookup or similarity-based access to relevant text or embeddings.
+- **Generation Layer**: Produces model outputs for downstream text generation tasks.
+- **Evaluation Layer**: Contains scripts or notebooks for measuring model quality and comparing results.
+- **Source Layer**: Shared utilities and reusable code live under `src/`.
+
+### High-Level Architecture
+
+```mermaid
+flowchart TD
+    A[Input Data] --> B[Preprocessing]
+    B --> C[Training / Fine-tuning]
+    C --> D[Model Artifacts]
+    D --> E[Evaluation]
+    D --> F[Retrieval]
+    D --> G[Generation]
+    E --> H[Results and Metrics]
+    F --> H
+    G --> H
 ```
 
 ## Requirements
