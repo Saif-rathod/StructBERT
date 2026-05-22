@@ -1,25 +1,29 @@
 # StructBERT
 
-StructBERT is a lightweight project for training a BERT-based masked language model on a custom text corpus. It uses Hugging Face Transformers and Datasets to fine-tune `bert-base-uncased` for masked language modeling.
+StructBERT is a lightweight project for training and experimenting with BERT-based language modeling and related NLP tasks. It uses Hugging Face Transformers and Datasets for training workflows.
 
 ## Features
 
-- Fine-tunes `bert-base-uncased` for masked language modeling
-- Uses Hugging Face `Trainer` for simple training
+- BERT-based masked language modeling
+- Uses Hugging Face `Trainer` for training
 - Supports custom text corpora
-- Saves the trained model for later use
+- Saves trained models for later use
 
 ## Project Structure
 
 ```text
 StructBERT/
 ├── data/
-│   └── mlm/
-│       └── dsa_corpus.txt
-├── models/
-│   └── structbert_mlm/
-└── training/
-    └── train_mlm.py
+├── evaluation/
+├── generation/
+├── retrieval/
+├── src/
+├── training/
+├── .gitignore
+├── README.md
+├── readme.md
+├── requirements.txt
+└── structbert-encoder.ipynb
 ```
 
 ## Requirements
@@ -75,14 +79,6 @@ models/structbert_mlm
 ```
 
 You can later reload the model with Hugging Face APIs.
-
-## Script Overview
-
-The main training logic is in:
-
-```python
-training/train_mlm.py
-```
 
 ## Notes
 
